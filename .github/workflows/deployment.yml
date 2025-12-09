@@ -25,6 +25,7 @@ jobs:
         run: npm test
 
   deploy:
+    needs: test   # ← ajoute cette ligne pour attendre la fin de test
     runs-on: ubuntu-latest
     steps:
       - name: Checkout repository
